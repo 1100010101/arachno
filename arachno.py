@@ -40,9 +40,17 @@ screen = pygame.display.set_mode([500, 500])
 
 green = (0,128,0)
 
+#yellow
+
+yellow = (255,255,0)
+
 #rectangle
 
 nelio = pygame.Rect(50, 50, 100, 100)
+
+#yellowtriangle
+
+triangle = [(25,400),(125,400),(75,300)]
 
 # Run until the user asks to quit
 running = True
@@ -59,7 +67,11 @@ while running:
     # Draw a solid blue circle in the center
     pygame.draw.circle(screen, (0, 0, 255), (250, 250), 75)
     pygame.draw.rect(screen, green, nelio )
-    
+
+
+    pygame.draw.polygon(screen, yellow, triangle)
+
+
 
     # Flip the display
     pygame.display.flip()
