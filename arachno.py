@@ -44,6 +44,14 @@ green = (0,128,0)
 
 yellow = (255,255,0)
 
+#red color
+
+red = (255,0,0)
+
+#hexagon
+
+kuusikulmio = [(400, 50) , (425, 50), (440, 68), (425, 83),(400, 83) , (382, 68)]
+
 #rectangle
 
 nelio = pygame.Rect(50, 50, 100, 100)
@@ -51,6 +59,7 @@ nelio = pygame.Rect(50, 50, 100, 100)
 #yellowtriangle
 
 triangle = [(25,400),(125,400),(75,300)]
+
 
 # Run until the user asks to quit
 running = True
@@ -68,9 +77,13 @@ while running:
     pygame.draw.circle(screen, (0, 0, 255), (250, 250), 75)
     pygame.draw.rect(screen, green, nelio )
 
-
+    
+    # piirretään neliö
     pygame.draw.polygon(screen, yellow, triangle)
 
+
+    #piirretään kuusikulmio
+    pygame.draw.polygon(screen, red, kuusikulmio)
 
 
     # Flip the display
