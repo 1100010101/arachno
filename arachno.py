@@ -40,6 +40,14 @@ screen = pygame.display.set_mode([500, 500])
 
 green = (0,128,0)
 
+#red color
+
+red = (255,0,0)
+
+#hexagon
+
+kuusikulmio = [(400, 50) , (425, 50), (440, 68), (425, 83),(400, 83) , (382, 68)]
+
 #rectangle
 
 nelio = pygame.Rect(50, 50, 100, 100)
@@ -59,6 +67,8 @@ while running:
     # Draw a solid blue circle in the center
     pygame.draw.circle(screen, (0, 0, 255), (250, 250), 75)
     pygame.draw.rect(screen, green, nelio )
+    #piirretään kuusikulmio
+    pygame.draw.polygon(screen, red, kuusikulmio)
     
 
     # Flip the display
